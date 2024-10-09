@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Sucesso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blur"></div> <!-- Adicione este elemento para o fundo -->
+    
+    <div class="verification-box">
+        <div class="success-message">
+            <i class="check-icon">✅</i> 
+            <strong>Sucesso</strong><br>
+            Você foi <strong>verificado com sucesso</strong> em Golden Store!
+        </div>
+        <div class="server-name">Golden Store</div>
+        <div class="thank-you-message">Obrigado por se verificar!</div>
+        <img src="que.png" alt="Imagem do servidor" class="server-image">
+        <button class="back-btn">Voltar para o servidor</button>
+        <div class="countdown">Retornando em 10...</div>
+    </div>
+
+    <script>
+        let countdown = 10; // Ajustado para 10 segundos
+        const countdownElement = document.querySelector('.countdown');
+
+        setInterval(() => {
+            countdown--;
+            countdownElement.textContent = `Retornando em ${countdown}...`;
+            if (countdown === 0) {
+                window.location.href = 'https://discord.gg/5UuEGJGa';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
